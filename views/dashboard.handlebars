@@ -1,0 +1,33 @@
+<div class="columns is-multiline" id="card-container">
+  <div class="column is-full spacer">
+    <a href="/newpost">
+      <button class="button is-info" id="new-post-button">Create new post</button>
+    </a>
+  </div>
+  {{!-- posts append here --}}
+  <div class="columns is-multiline" id="card-container">
+  <div class="column is-full spacer">
+  </div>
+  {{#each posts as |post|}}
+  <div class="column is-full">
+    <div class="card">
+      <a href="/posts/{{post.id}}">
+        <header class="card-header has-background-success">
+          <p class="card-header-title">
+            {{post.title}}
+          </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <p>Created by: {{post.user.username}}</p>
+          </div>
+        </div>
+    </div>
+    </a>
+  </div>
+  {{/each}}
+
+
+  {{!-- posts append here --}}
+</div>
+<script href="./js/dashboard.js"></script>

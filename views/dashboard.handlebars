@@ -19,15 +19,13 @@
         </header>
         <div class="card-content">
           <div class="content">
-            <p>Created by: {{post.user.username}}</p>
+            <p>Created by: {{user.username}} on {{format_date post.date_created}}</p>
           </div>
         </div>
     </div>
     </a>
   </div>
   {{/each}}
-
-
   {{!-- posts append here --}}
 </div>
-<script href="./js/dashboard.js"></script>
+{{!-- <script src="./js/dashboard.js"></script> --}}

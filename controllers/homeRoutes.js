@@ -1,4 +1,4 @@
-const { Post, User } = require('../models');
+const { Post, User, Comment } = require('../models');
 const router = require('express').Router();
 const withAuth = require('../utils/auth')
 
@@ -38,8 +38,12 @@ router.get('/dashboard', withAuth, async (req, res) => {
   try {
     const postData = await Post.findAll({
       where: {
-        creator_id: req.session.user_id
-      }
+        creator_id: req.session.user_id,
+      },
+      include: [{
+          model: User, 
+          attributes: ['username'],
+        }]
     });
     const posts = postData.map((post) => post.get({ plain: true}));
     res.render('dashboard', {

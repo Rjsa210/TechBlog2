@@ -17,15 +17,19 @@
             {{post.title}}
           </p>
         </header>
+        </a>
         <div class="card-content">
           <div class="content">
+            <p>{{post.content}}</p>
             <p>Created by: {{user.username}} on {{format_date post.date_created}}</p>
+            <button class="button is-danger" id="delete-button" data-id="{{post.id}}">delete post</button>
+            <button class="button is-warning" id="update-button">update post</button>
           </div>
         </div>
     </div>
-    </a>
+    
   </div>
   {{/each}}
   {{!-- posts append here --}}
 </div>
-{{!-- <script src="./js/dashboard.js"></script> --}}
+<script src="./js/dashboard.js"></script>

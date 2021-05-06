@@ -24,10 +24,8 @@ router.delete('/:id', withAuth, async (req, res) => {
       where: {
         id: req.params.id,
         creator_id: req.session.user_id,
-
       },
     });
-
     if(!postData) {
       res.status(404).json({ message: 'No post found with this id!'});
       return;

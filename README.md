@@ -9,7 +9,7 @@ Unfortunately I was not able to acheive full functionality on this homework assi
 with our second project coming due, and the sheer size of this assignment I was not able to implement comments, or updates.
 
 ## Demonstration
-### [A video of app function can be found here](https://drive.google.com/file/d/1-0SgAxA9SBxLiPUOhyBSLjHUW2WXCCFO/view)
+### [A video of app function can be found here](https://drive.google.com/file/d/1gQHp4cR02pjoje1lZvfty9b5uXj6l95U/view)
 
 ## Deployment
 ### [Deployed Heroku App](https://mysterious-caverns-17613.herokuapp.com/)
